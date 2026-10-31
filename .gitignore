@@ -1,0 +1,44 @@
+
+# Build output
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+.idea/
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.Local.json
+secrets.json
+
+# Private user data and uploaded CVs
+PrivateStorage/
+**/PrivateStorage/
+uploads/
+**/uploads/
+
+# Test results
+TestResults/
+**/TestResults/
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Node.js frontend dependencies and build output
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.next/
