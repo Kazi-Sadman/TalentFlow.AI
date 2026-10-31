@@ -7,6 +7,16 @@ Companies publish jobs, candidates apply with a PDF CV, recruiters move applicat
 ## Problem
 
 CVs, jobs, interviews and statuses are often in different places. It is slow to find the needed skills in many CVs, and there is no history of who changed a status. TalentFlow AI keeps everything in one API.
+## Screenshots
+
+### Home Page
+<img src="docs/screenshots/home-page.png" alt="TalentFlow AI Home Page" width="100%">
+
+### Login Page
+<img src="docs/screenshots/login-page.png" alt="TalentFlow AI Login Page" width="100%">
+
+### Dashboard
+<img src="docs/screenshots/dashboard.png" alt="TalentFlow AI Dashboard" width="100%">
 
 ## Features
 
