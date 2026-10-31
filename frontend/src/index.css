@@ -1,0 +1,119 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0a0e0c;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Panels are a little lighter than the page, so they stand out */
+.mantine-Paper-root {
+  background: #111816;
+  border-color: #232d29;
+}
+
+/* Keep long words (emails, links) inside their boxes */
+.break-anywhere {
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Hero background: green glow + a perspective grid floor ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(60% 55% at 50% 100%, rgba(71, 220, 154, 0.16), transparent 70%),
+    radial-gradient(40% 40% at 85% 20%, rgba(71, 220, 154, 0.08), transparent 70%);
+}
+
+.hero-floor {
+  position: absolute;
+  left: 50%;
+  bottom: -90px;
+  z-index: -1;
+  width: 170%;
+  height: 340px;
+  transform: translateX(-50%) perspective(520px) rotateX(64deg);
+  transform-origin: bottom center;
+  background:
+    repeating-linear-gradient(90deg, rgba(71, 220, 154, 0.34) 0 2px, transparent 2px 34px),
+    repeating-linear-gradient(0deg, rgba(71, 220, 154, 0.22) 0 2px, transparent 2px 30px);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 100%, #000 18%, transparent 68%);
+  mask-image: radial-gradient(ellipse at 50% 100%, #000 18%, transparent 68%);
+}
+
+/* Soft glow behind a card */
+.glow-mint {
+  box-shadow: 0 20px 60px -20px rgba(71, 220, 154, 0.45);
+}
+
+/* Floating hero cards move a little (disabled when the user prefers less motion) */
+@keyframes tf-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-a {
+  animation: tf-float 7s ease-in-out infinite;
+}
+
+.float-b {
+  animation: tf-float 9s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Links in the top navigation */
+.nav-link {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #c3cfc9;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+  color: #47dc9a;
+}
+
+.footer-link {
+  color: #8fa099;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
